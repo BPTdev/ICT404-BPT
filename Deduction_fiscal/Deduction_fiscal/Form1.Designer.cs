@@ -30,16 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cb1 = new System.Windows.Forms.CheckBox();
+            this.cb2 = new System.Windows.Forms.CheckBox();
+            this.cb3 = new System.Windows.Forms.CheckBox();
+            this.tb1 = new System.Windows.Forms.TextBox();
+            this.tb2 = new System.Windows.Forms.TextBox();
+            this.tcb1 = new System.Windows.Forms.TextBox();
+            this.tcb2 = new System.Windows.Forms.TextBox();
+            this.tcb3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.res = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -62,73 +62,87 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Coefficient familial";
             // 
-            // checkBox1
+            // cb1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(106, 134);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(168, 28);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Déduction jeune";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cb1.AutoSize = true;
+            this.cb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb1.Location = new System.Drawing.Point(106, 134);
+            this.cb1.Name = "cb1";
+            this.cb1.Size = new System.Drawing.Size(168, 28);
+            this.cb1.TabIndex = 2;
+            this.cb1.Text = "Déduction jeune";
+            this.cb1.UseVisualStyleBackColor = true;
+            this.cb1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // checkBox2
+            // cb2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(106, 168);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(192, 28);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Déduction transport";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cb2.AutoSize = true;
+            this.cb2.Checked = true;
+            this.cb2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb2.Location = new System.Drawing.Point(106, 168);
+            this.cb2.Name = "cb2";
+            this.cb2.Size = new System.Drawing.Size(192, 28);
+            this.cb2.TabIndex = 3;
+            this.cb2.Text = "Déduction transport";
+            this.cb2.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cb3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(106, 202);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(144, 28);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Rabais fidélité";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cb3.AutoSize = true;
+            this.cb3.Checked = true;
+            this.cb3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb3.Location = new System.Drawing.Point(106, 202);
+            this.cb3.Name = "cb3";
+            this.cb3.Size = new System.Drawing.Size(144, 28);
+            this.cb3.TabIndex = 4;
+            this.cb3.Text = "Rabais fidélité";
+            this.cb3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tb1
             // 
-            this.textBox1.Location = new System.Drawing.Point(307, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 5;
+            this.tb1.Location = new System.Drawing.Point(307, 32);
+            this.tb1.Name = "tb1";
+            this.tb1.Size = new System.Drawing.Size(140, 20);
+            this.tb1.TabIndex = 5;
+            this.tb1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb1.TextChanged += new System.EventHandler(this.tb1_TextChanged);
             // 
-            // textBox2
+            // tb2
             // 
-            this.textBox2.Location = new System.Drawing.Point(395, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 20);
-            this.textBox2.TabIndex = 6;
+            this.tb2.Location = new System.Drawing.Point(395, 83);
+            this.tb2.Name = "tb2";
+            this.tb2.Size = new System.Drawing.Size(52, 20);
+            this.tb2.TabIndex = 6;
+            this.tb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // tcb1
             // 
-            this.textBox3.Location = new System.Drawing.Point(395, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(52, 20);
-            this.textBox3.TabIndex = 7;
+            this.tcb1.Location = new System.Drawing.Point(395, 140);
+            this.tcb1.Name = "tcb1";
+            this.tcb1.Size = new System.Drawing.Size(52, 20);
+            this.tcb1.TabIndex = 7;
+            this.tcb1.Text = "900";
+            this.tcb1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // tcb2
             // 
-            this.textBox4.Location = new System.Drawing.Point(395, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(52, 20);
-            this.textBox4.TabIndex = 8;
+            this.tcb2.Location = new System.Drawing.Point(395, 174);
+            this.tcb2.Name = "tcb2";
+            this.tcb2.Size = new System.Drawing.Size(52, 20);
+            this.tcb2.TabIndex = 8;
+            this.tcb2.Text = "650";
+            this.tcb2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox5
+            // tcb3
             // 
-            this.textBox5.Location = new System.Drawing.Point(395, 208);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(52, 20);
-            this.textBox5.TabIndex = 9;
+            this.tcb3.Location = new System.Drawing.Point(395, 208);
+            this.tcb3.Name = "tcb3";
+            this.tcb3.Size = new System.Drawing.Size(52, 20);
+            this.tcb3.TabIndex = 9;
+            this.tcb3.Text = "0";
+            this.tcb3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button1
             // 
@@ -139,16 +153,18 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Calcul";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // res
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(114, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 25);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Revenu imposable: fr.";
+            this.res.AutoSize = true;
+            this.res.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.res.Location = new System.Drawing.Point(103, 317);
+            this.res.Name = "res";
+            this.res.Size = new System.Drawing.Size(33, 25);
+            this.res.TabIndex = 11;
+            this.res.Text = "...";
+            this.res.Click += new System.EventHandler(this.res_Click);
             // 
             // Form1
             // 
@@ -156,16 +172,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(495, 358);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.res);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.tcb3);
+            this.Controls.Add(this.tcb2);
+            this.Controls.Add(this.tcb1);
+            this.Controls.Add(this.tb2);
+            this.Controls.Add(this.tb1);
+            this.Controls.Add(this.cb3);
+            this.Controls.Add(this.cb2);
+            this.Controls.Add(this.cb1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -179,16 +195,16 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.CheckBox cb1;
+        private System.Windows.Forms.CheckBox cb2;
+        private System.Windows.Forms.CheckBox cb3;
+        private System.Windows.Forms.TextBox tb1;
+        private System.Windows.Forms.TextBox tb2;
+        private System.Windows.Forms.TextBox tcb1;
+        private System.Windows.Forms.TextBox tcb2;
+        private System.Windows.Forms.TextBox tcb3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label res;
     }
 }
 
