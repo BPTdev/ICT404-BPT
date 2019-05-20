@@ -37,16 +37,16 @@ namespace Deduction_fiscal
             } else if(float.Parse(tb1.Text) < 20000 || tb1.Text == "")
             {
                 MessageBox.Show("Veuillez entrez une valeur dans revenu brut supérieur à 20'000. ", "Erreur");
-            } else if(float.Parse(tb2.Text) < 0 || tb2.Text == "")
+            } else if(float.Parse(tb2.Text) <= 0 || tb2.Text == "")
             {
                 MessageBox.Show("Veuillez entrez une valeur dans coefficiant famillial supérieur à 0. ", "Erreur");
             }
 
             else //calcul du premier chanp diviser par le second
             {
-                coefficientfamillial = float.Parse(tb1.Text);
-                revenubrut = float.Parse(tb2.Text);
-                calcul = revenubrut / coefficientfamillial;
+                coefficientfamillial = float.Parse(tb2.Text);
+                revenubrut = float.Parse(tb1.Text);
+                calcul =  revenubrut / coefficientfamillial;
             }
             transport = float.Parse(tcb2.Text);
             jeune = float.Parse(tcb1.Text);
@@ -55,7 +55,6 @@ namespace Deduction_fiscal
             //si le rabais est cocher le faire avant les deux soutraction
             if (cb3.Checked)
             {
-
                 calcul = calcul - calcul * (rabais / 100);
             }
             if (cb2.Checked)
@@ -64,9 +63,10 @@ namespace Deduction_fiscal
             }
             if (cb1.Checked)
             {
-
                 calcul = calcul - jeune;
             }
+            res.Text = "Revenu imposable: fr." + calcul;
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace Deduction_fiscal
 
         private void res_Click(object sender, EventArgs e)
         {
-            res.Text = "Revenu imposable: fr." + calcul;
+
         }
 
         private void tb1_TextChanged(object sender, EventArgs e)
