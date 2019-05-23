@@ -17,10 +17,18 @@ namespace fnetre_roug_bleu
         {
             InitializeComponent();
         }
-     
+        int compteurchangement=0;
+        int compteurchangement2 = 0;
+        int testsichangement = 0;
+
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Location = new Point(1505, 600);
+            
+            if (this.Location != new Point(1505, 600))
+            {
+                compteurchangement2++;
+                this.Location = new Point(1505, 600);
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -30,37 +38,56 @@ namespace fnetre_roug_bleu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Location = new Point(0, 0);
+            if (this.Location != new Point(0, 0))
+            {
+                compteurchangement2++;
+                this.Location = new Point(0, 0);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.Blue;
+            if (testsichangement==0 || testsichangement == 2)
+            {
+                testsichangement = 1;
+                compteurchangement++;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.Red;
+            if (testsichangement == 0 || testsichangement == 1)
+            {
+                testsichangement = 2;
+                compteurchangement++;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int test;
-            this.Location = new Point(1505,0);
+            if (this.Location != new Point(1505, 0))
+            {
+                compteurchangement2++;
+                this.Location = new Point(1505, 0);
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Location = new Point(0, 600);
+            if (this.Location != new Point(0, 600))
+            {
+                compteurchangement2++;
+                this.Location = new Point(0, 600);
+            }
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 50; i++)
-            {
-                this.BackColor = Color.Red;
-                this.BackColor = Color.Blue;
-            }
+            MessageBox.Show("La fenètre a changer de couleur " + compteurchangement + " fois et " + compteurchangement2 + " de place", "Compteur");
         }
     }
 }
