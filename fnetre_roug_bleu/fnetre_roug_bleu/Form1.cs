@@ -23,11 +23,11 @@ namespace fnetre_roug_bleu
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            if (this.Location != new Point(1505, 600))
+
+            if (!this.Location.Equals(new Point(Screen.GetBounds(this).Height - this.Height, 600)))
             {
                 compteurchangement2++;
-                this.Location = new Point(1505, 600);
+                this.Location = new Point(Screen.GetBounds(this).Height - this.Height, 600);
             }
         }
 
@@ -67,21 +67,22 @@ namespace fnetre_roug_bleu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.Location != new Point(1505, 0))
+            if (!this.Location.Equals(new Point(Screen.GetBounds(this).Width - this.Width, 0)))
             {
                 compteurchangement2++;
-                this.Location = new Point(1505, 0);
+                this.Location = new Point(Screen.GetBounds(this).Width - this.Width, 0);
             }
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (this.Location != new Point(0, 600))
+            if (!this.Location.Equals(new Point(Screen.GetBounds(this).Height - this.Height, 0)))
             {
                 compteurchangement2++;
-                this.Location = new Point(0, 600);
+                this.Location = new Point(Screen.GetBounds(this).Height - this.Height, 0);
             }
+
             
         }
 
