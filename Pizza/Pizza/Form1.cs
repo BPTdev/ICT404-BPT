@@ -19,7 +19,7 @@ namespace Pizza
         int table = 0;
         private void nbtable_TextChanged(object sender, EventArgs e)
         {
-            table = float.Parse(nbtable.text);
+            table = int.Parse(nbtable.Text);
         }
     }
 }
