@@ -40,7 +40,7 @@
             this.crevette = new System.Windows.Forms.CheckBox();
             this.tbocommande = new System.Windows.Forms.Label();
             this.butcommander = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtb1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // nbtable
@@ -172,21 +172,25 @@
             this.butcommander.TabIndex = 8;
             this.butcommander.Text = "Commander";
             this.butcommander.UseVisualStyleBackColor = true;
+            this.butcommander.Click += new System.EventHandler(this.butcommander_Click);
             // 
-            // richTextBox1
+            // rtb1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(40, 323);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(302, 96);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.rtb1.BackColor = System.Drawing.Color.Yellow;
+            this.rtb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtb1.Location = new System.Drawing.Point(40, 323);
+            this.rtb1.Name = "rtb1";
+            this.rtb1.ReadOnly = true;
+            this.rtb1.Size = new System.Drawing.Size(302, 96);
+            this.rtb1.TabIndex = 9;
+            this.rtb1.Text = "Veuillez séléctionnez des paramètres.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 448);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtb1);
             this.Controls.Add(this.butcommander);
             this.Controls.Add(this.tbocommande);
             this.Controls.Add(this.crevette);
@@ -220,7 +224,7 @@
         private System.Windows.Forms.CheckBox crevette;
         private System.Windows.Forms.Label tbocommande;
         private System.Windows.Forms.Button butcommander;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtb1;
     }
 }
 
